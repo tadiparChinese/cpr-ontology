@@ -1,0 +1,1465 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY efo "http://www.ebi.ac.uk/efo/" >
+    <!ENTITY purl "http://purl.obofoundry.org/" >
+    <!ENTITY SO "http://purl.org/obo/owl/SO#" >
+    <!ENTITY PRO "http://purl.org/obo/owl/PRO#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY CHEBI "http://purl.org/obo/owl/CHEBI#" >
+    <!ENTITY obo2 "http://purl.obolibrary.org/obo/" >
+    <!ENTITY obo "http://purl.obofoundry.org/obo/" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY snap "http://www.ifomis.org/bfo/1.1/snap#" >
+    <!ENTITY span "http://www.ifomis.org/bfo/1.1/span#" >
+    <!ENTITY ro "http://www.obofoundry.org/ro/ro.owl#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY iao "http://purl.obolibrary.org/obo/iao.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY transmed "http://www.w3.org/2001/sw/hcls/ns/transmed/" >
+    <!ENTITY oboInOwl "http://www.geneontology.org/formats/oboInOwl#" >
+]>
+
+
+<rdf:RDF xmlns="&transmed;tmo#"
+     xml:base="&transmed;tmo"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
+     xmlns:efo="http://www.ebi.ac.uk/efo/"
+     xmlns:iao="&obo2;iao.owl#"
+     xmlns:snap="http://www.ifomis.org/bfo/1.1/snap#"
+     xmlns:SO="http://purl.org/obo/owl/SO#"
+     xmlns:obo2="http://purl.obolibrary.org/obo/"
+     xmlns:obo="&purl;obo/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:purl="http://purl.obofoundry.org/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:CHEBI="http://purl.org/obo/owl/CHEBI#"
+     xmlns:PRO="http://purl.org/obo/owl/PRO#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:transmed="http://www.w3.org/2001/sw/hcls/ns/transmed/"
+     xmlns:span="http://www.ifomis.org/bfo/1.1/span#">
+    <owl:Ontology rdf:about="">
+        <dc:creator
+            >Matthias Samwald</dc:creator>
+        <dc:creator>Elgar Pichler</dc:creator>
+        <dc:subject
+            >ontology, translational medicine, life sciences, health care</dc:subject>
+        <dc:creator
+            >Michel Dumontier</dc:creator>
+        <dc:creator>Trish Whetzel</dc:creator>
+        <dc:creator>Christi Denney</dc:creator>
+        <dc:description
+            >The Translational Medicine Ontology (TMO) is a high-level, patient-centric ontology that extends existing domain ontologies to integrate data across aspects of drug discovery and clinical practice. The ontology has been developed by participants in the World Wide Web Consortium&#8217;s Semantic Web for Health Care and Life Sciences Interest Group.</dc:description>
+        <dc:creator>Colin Batchelor</dc:creator>
+        <dc:creator>Julia Kozlovsky</dc:creator>
+        <dc:creator>Joanne Luciano</dc:creator>
+        <dc:title
+            >Translational Medicine Ontology</dc:title>
+        <dc:creator>Susie Stephens</dc:creator>
+        <dc:rights
+            >Creative Commons - By Attribution</dc:rights>
+        <dc:publisher
+            >W3C Health Care and Life Sciences Interest Group</dc:publisher>
+        <owl:imports rdf:resource="http://translationalmedicineontology.googlecode.com/svn/trunk/ontology/tmo-external.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&obo2;iao.owl#IAO_0000114"/>
+    <owl:AnnotationProperty rdf:about="&obo2;iao.owl#IAO_0000115"/>
+    <owl:AnnotationProperty rdf:about="&dc;title"/>
+    <owl:AnnotationProperty rdf:about="&purl;IAO_0000111"/>
+    <owl:AnnotationProperty rdf:about="&oboInOwl;hasDbXref"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;label"/>
+    <owl:AnnotationProperty rdf:about="&dc;creator"/>
+    <owl:AnnotationProperty rdf:about="&dc;rights"/>
+    <owl:AnnotationProperty rdf:about="&obo2;iao.owl#IAO_0000111"/>
+    <owl:AnnotationProperty rdf:about="&dc;publisher"/>
+    <owl:AnnotationProperty rdf:about="&obo2;iao.owl#IAO_0000116"/>
+    <owl:AnnotationProperty rdf:about="&obo2;iao.owl#IAO_0000119"/>
+    <owl:AnnotationProperty rdf:about="&dc;description"/>
+    <owl:AnnotationProperty rdf:about="&obo2;iao.owl#IAO_0000117"/>
+    <owl:AnnotationProperty rdf:about="&dc;subject"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000316 -->
+
+    <owl:ObjectProperty rdf:about="&obo2;OBI_0000316">
+        <rdfs:label>has role</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.obofoundry.org/ro/ro.owl#part_of -->
+
+    <owl:ObjectProperty rdf:about="&ro;part_of"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000030 -->
+
+    <owl:Class rdf:about="&obo2;IAO_0000030"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000033 -->
+
+    <owl:Class rdf:about="&obo2;IAO_0000033"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000310 -->
+
+    <owl:Class rdf:about="&obo2;IAO_0000310">
+        <oboInOwl:hasDbXref
+            >drugbank:references</oboInOwl:hasDbXref>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000313 -->
+
+    <owl:Class rdf:about="&obo2;IAO_0000313">
+        <owl:equivalentClass rdf:resource="&transmed;TMO_0012"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/snap#Continuant -->
+
+    <owl:Class rdf:about="&snap;Continuant">
+        <oboInOwl:hasDbXref>foaf:Agent</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>dcterms:Agent</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref
+            >dcterms:AgentClass</oboInOwl:hasDbXref>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/snap#Disposition -->
+
+    <owl:Class rdf:about="&snap;Disposition"/>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/snap#GenericallyDependentContinuant -->
+
+    <owl:Class rdf:about="&snap;GenericallyDependentContinuant"/>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/snap#MaterialEntity -->
+
+    <owl:Class rdf:about="&snap;MaterialEntity"/>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/snap#Role -->
+
+    <owl:Class rdf:about="&snap;Role"/>
+    
+
+
+    <!-- http://www.ifomis.org/bfo/1.1/span#Process -->
+
+    <owl:Class rdf:about="&span;Process"/>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0000 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0000">
+        <rdfs:label
+            >active ingredient</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&transmed;TMO_0071"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo2;OBI_0000316"/>
+                        <owl:someValuesFrom rdf:resource="&transmed;TMO_0064"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&ro;part_of"/>
+                        <owl:someValuesFrom rdf:resource="&transmed;TMO_0001"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0071"/>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">HL7V3.0:ACTI</oboInOwl:hasDbXref>
+        <dc:description
+            >An active ingredient is a pharmaceutical ingredient that has the disposition to treat a certain disease.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0001 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0001">
+        <rdfs:label
+            >formulated pharmaceutical</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0063"/>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string"
+            >NCIt:Pharmaceutical_Formulation</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">UMLS:C1705957</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>dailymed:drugs</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>medicare:drugs</oboInOwl:hasDbXref>
+        <dc:description
+            >A formulated pharmaceutical is a chemical substance whose granular parts include an active ingredient, an excipient, and possibly a stability regulator for the active ingredient.</dc:description>
+        <oboInOwl:hasDbXref>sider:drugs</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>drugbank:drugs</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>pharmgkb:Drug</oboInOwl:hasDbXref>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0002 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0002">
+        <rdfs:label
+            >pharmaceutical product</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0001"/>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string"
+            >NCIt:Finished_Pharmaceutical_Product</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">UMLS:C1708062</oboInOwl:hasDbXref>
+        <dc:description
+            >A pharmaceutical product is a formulated pharmaceutical that has been approved to treat patients.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0003 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0003">
+        <rdfs:label
+            >inactive ingredient</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&transmed;TMO_0071"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo2;OBI_0000316"/>
+                        <owl:someValuesFrom rdf:resource="&transmed;TMO_0065"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&ro;part_of"/>
+                        <owl:someValuesFrom rdf:resource="&transmed;TMO_0001"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0071"/>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">HL7V3.0:IACT</oboInOwl:hasDbXref>
+        <dc:description
+            >An inactive ingredient is a pharmaceutical ingredient that is part of a pharmaceutical formulation but does not have the disposition to treat a certain disease.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0005 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0005">
+        <rdfs:label>genetic measure</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0010"/>
+        <dc:description
+            >A genetic measure is a biomedical measure that describes or is a measure of genetic entities.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0006 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0006">
+        <rdfs:label>subject role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&snap;Role"/>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">NCIt:Target</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">UMLS:C1521840</oboInOwl:hasDbXref>
+        <dc:description
+            >A role played by a material entity it being the subject of a study.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0007 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0007">
+        <rdfs:label>prognosis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0059"/>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Galen:Prognosis</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">MSH:D011379</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">NCIt:Prognosis</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">UMLS:C0033325</oboInOwl:hasDbXref>
+        <iao:IAO_0000119>NCI Thesaurus</iao:IAO_0000119>
+        <dc:description
+            >A prognosis is a hypothesis about the likely course of a disease, the chance of recovery or recurrence.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0008 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0008">
+        <rdfs:label>patient role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0060"/>
+        <dc:description
+            >A patient role is a role played a human subject that receives medical attention, care or treatment or who is registered with a medical institution with the purpose of receiving medical care when necessary.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0009 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0009">
+        <rdfs:label
+            >medical expert role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0074"/>
+        <oboInOwl:hasDbXref
+            >OCRe_clinical:Clinician</oboInOwl:hasDbXref>
+        <dc:description
+            >An medical expert role is a role played by a human in a clinical context who is involved in the assessment or administration of treatment or its results.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0010 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0010">
+        <rdfs:label
+            >biomedical measure</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo2;IAO_0000030"/>
+        <dc:description
+            >A biomedical measure is an information content entity that describes or is a measure of biomedically relevant entities.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0011 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0011">
+        <rdfs:label
+            >molecular structure descriptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo2;IAO_0000030"/>
+        <rdfs:comment
+            >Examples: connection table, fragment, pharmacophore.</rdfs:comment>
+        <dc:description
+            >A molecular structure descriptor is an information content entity that describes atoms in terms of the connections between them.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0012 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0012">
+        <rdfs:label>patent</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo2;IAO_0000310"/>
+        <rdfs:subClassOf rdf:resource="&obo2;IAO_0000313"/>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">BIRNLex:2364</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">BRO:Patent</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Galen:patent</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">IAO:0000313</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">MSH:D020490</oboInOwl:hasDbXref>
+        <iao:IAO_0000119
+            >American Heritage(R) Stedman&#39;s Medical Dictionary</iao:IAO_0000119>
+        <dc:description
+            >A patent is an information entity granted by a patent office which confers upon the patenter the sole right to make, use and sell an invention for a set period of time.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0013 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0013">
+        <rdfs:label
+            >exclusion criterion for clinical trial</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0077"/>
+        <dc:description
+            >An exclusion criterion for clinical trial is a clinical trial criterion which, if satisfied, supports the exclusion of candidate patients.</dc:description>
+        <oboInOwl:hasDbXref>IAO:0000124</oboInOwl:hasDbXref>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0014 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0014">
+        <rdfs:label
+            >inclusion criterion for clinical trial</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0077"/>
+        <oboInOwl:hasDbXref>IAO:0000124</oboInOwl:hasDbXref>
+        <dc:description
+            >A inclusion criterion for clinical trial is a clinical trial criterion which, if satisfied, supports the inclusion of candidate patients.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0015 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0015">
+        <rdfs:label
+            >diagnosis result</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0024"/>
+        <dc:description
+            >A diagnosis result is a medical measure of determining the nature of a  problem or illness through medical procedure.</dc:description>
+        <oboInOwl:hasDbXref>IAO:0000124</oboInOwl:hasDbXref>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0016 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0016">
+        <rdfs:label
+            >clinical protocol</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo2;IAO_0000033"/>
+        <oboInOwl:hasDbXref>IAO:0000124</oboInOwl:hasDbXref>
+        <dc:description
+            >A clinical protocol is a directive information entity about the objective(s), design, methodology, statistical considerations, and organization of a clinical procedure.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0017 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0017">
+        <rdfs:label>evidence</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo2;IAO_0000030"/>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">NCIt:Evidence</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">UMLS:C0332120</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>IAO:0000123</oboInOwl:hasDbXref>
+        <dc:description
+            >Evidence is an information entity relevant to some decision-making process.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0018 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0018">
+        <rdfs:label
+            >environmental measure</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo2;IAO_0000030"/>
+        <dc:description
+            >An environmental measure is an information entity about an aspect of the physical environment.</dc:description>
+        <oboInOwl:hasDbXref>IAO:0000123</oboInOwl:hasDbXref>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0019 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0019">
+        <rdfs:label
+            >phenotypic measure</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0010"/>
+        <dc:description
+            >A phenotypic measure is a biomedical measure about a phenotype, an observable characteristic of an organism.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0020 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0020">
+        <rdfs:label
+            >personal medical history</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0024"/>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string"
+            >NCIt:Personal_Medical_History</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">UMLS:C0262926</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>pchr:Encounter</oboInOwl:hasDbXref>
+        <dc:description
+            >A personal medical history is a medical record consisting of a collection of information obtained from the patient and from other sources concerning the patient&#39;s health.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0021 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0021">
+        <rdfs:label
+            >clinical trial protocol</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0016"/>
+        <dc:description
+            >A clinical trial protocol is a clinical protocol about the objective(s), design, methodology, statistical considerations, and organization of a clinical trial.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0022 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0022">
+        <rdfs:label>sign</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0024"/>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">NCIt:Sign</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string"
+            >SNOMEDCT:72670004</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">UMLS:C0311392</oboInOwl:hasDbXref>
+        <iao:IAO_0000119
+            >Richard Scheuermann, Werner Ceusters, Barry Smith in &quot;Toward an Ontological Treatment of Disease and Diagnosis&quot;</iao:IAO_0000119>
+        <dc:description
+            >A sign is a medical measure of a patient that is observed in a physical examination and is deemed by the clinician to be of clinical significance.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0023 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0023">
+        <rdfs:label>symptom</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0024"/>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">ACGT:Symptom</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">CPR:symptom</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">NCIt:Symptom</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">UMLS:C1457887</oboInOwl:hasDbXref>
+        <iao:IAO_0000119
+            >Richard Scheuermann, Werner Ceusters, Barry Smith in &quot;Toward an Ontological Treatment of Disease and Diagnosis&quot;</iao:IAO_0000119>
+        <dc:description
+            >A symptom is an observation by a patient which is hypothesized by the patient to be a realization of a disease.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0024 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0024">
+        <rdfs:label>medical measure</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0010"/>
+        <dc:description
+            >A medical measure is a biomedical measure that describes or is a measure of medically relevant entities.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0025 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0025">
+        <rdfs:label>institution</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&snap;GenericallyDependentContinuant"/>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string"
+            >ACGT:Institution</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">BIRNLex:2085</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">LNC:LP76237-4</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string"
+            >NCIt:Institution</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string"
+            >SNOMEDCT:385437003</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">UMLS:C1272753</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>linkedct:agency</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref
+            >dailymed:organization</oboInOwl:hasDbXref>
+        <dc:description
+            >An institution is an entity created by legislation or by practice which acts legally in the same way as a person.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0026 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0026">
+        <rdfs:label
+            >regulatory authority</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0025"/>
+        <dc:description
+            >A regulatory authority is an institution created by legislation which acts to control what treatments can be prescribed.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0027 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0027">
+        <rdfs:label
+            >institutional payer</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0025"/>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string"
+            >NCIt:Healthcare_Payer</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">UMLS:C2348942</oboInOwl:hasDbXref>
+        <rdfs:comment
+            >This is, at the moment, a kind of institution because 
+the payers are typically insurance companies or government bodies.
+But it is possible in some jurisdictions to pay for treatment oneself.
+Treat by renaming to &quot;institutional payer&quot;. --CRB</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0028 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0028">
+        <rdfs:label>market</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0029 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0029">
+        <rdfs:label>study</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0075"/>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">LNC:LP74341-6</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">NCIt:Study</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string"
+            >OCRe_research:Study</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string"
+            >SNOMEDCT:224699009</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">UMLS:C0947630</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>IAO:0000121</oboInOwl:hasDbXref>
+        <dc:description
+            >A study is a planned process that consists of planning, study execution, documentation and the production of conclusion(s).</dc:description>
+        <oboInOwl:hasDbXref>OBI:0000471</oboInOwl:hasDbXref>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0030 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0030">
+        <rdfs:label>intervention</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0029"/>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string"
+            >NCIt:Intervention</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string"
+            >OCRe_research:Intervention</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref
+            >linkedct:intervention</oboInOwl:hasDbXref>
+        <dc:description
+            >An intervention is a study in which a substance is administered to a subject or group of subjects.</dc:description>
+        <oboInOwl:hasDbXref>IAO:0000121</oboInOwl:hasDbXref>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0031 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0031">
+        <rdfs:label>diagnosis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0029"/>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">ACGT:Diagnosis</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">FHHO:Diagnosis</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Galen:Diagnosis</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">LNC:LP72437-4</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">MSH:D003933</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">NCIt:Diagnosis</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">OBI:0000075</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string"
+            >OCRe_clinical:Diagnosis</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string"
+            >SNOMEDCT:439401001</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">UMLS:C0011900</oboInOwl:hasDbXref>
+        <dc:description
+            >A diagnosis is a study composed of investigation, analysis and recognition of the presence and nature of disease, condition, or injury from expressed signs and symptoms; also, the scientific determination of any kind; the concise results of such an investigation.</dc:description>
+        <iao:IAO_0000119>NCI thesaurus</iao:IAO_0000119>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0032 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0032">
+        <rdfs:label>clinical trial</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0029"/>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">HL7V3.0:CLNTRL</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">MSH:D016430</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string"
+            >NCIt:Clinical_Trial</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string"
+            >SNOMEDCT:110465008</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>IAO:0000121</oboInOwl:hasDbXref>
+        <dc:description
+            >A clinical trial is a study to assess the efficacy of a substance for the treatment of a condition.</dc:description>
+        <oboInOwl:hasDbXref>linkedct:trials</oboInOwl:hasDbXref>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0033 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0033">
+        <rdfs:label>drug measure</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0010"/>
+        <dc:description
+            >A drug measure is a biomedical measure that describes or is a measure of drugs or their activies.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0034 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0034">
+        <rdfs:label
+            >molecular entity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&snap;MaterialEntity"/>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">CHEBI:23367</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string"
+            >GRO:MolecularEntity</oboInOwl:hasDbXref>
+        <dc:description
+            >Any constitutionally or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion, complex, conformer etc., identifiable as a separately distinguishable entity.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0035 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0035">
+        <rdfs:label>protein</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0034"/>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">ACGT:Protein</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">BIRNLex:23</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">CHEBI:36080</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">FMA:Protein</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">GO:0003675</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">GRO:Protein</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Galen:Protein</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">NCIt:Protein</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">ODGI:Protein</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">PRO:000000001</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string"
+            >SNOMEDCT:88878007</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">SO:0000358</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">UMLS:C0033684</oboInOwl:hasDbXref>
+        <dc:description
+            >A biological macromolecule that is composed of amino acids linked in a linear sequence (a polypeptide chain).</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0036 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0036">
+        <rdfs:label>cell line</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0045"/>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">BIRNLex:11036</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">EFO:0000322</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">MSH:D002460</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">NCIt:Cell_Line</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">UMLS:C0007600</oboInOwl:hasDbXref>
+        <dc:description
+            >A cell line is a material entity that consists of a population of cells cultured in vitro that are descended through one or more generations (and possible sub-cultures) from a single primary culture which was originally derived from part of an organism.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0037 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0037">
+        <rdfs:label>gene</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0034"/>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string"
+            >FMA:Structural_gene</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">GRO:Gene</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Galen:Gene</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">LNC:LP32747-5</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">MSH:D005796</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">NCIt:Gene</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string"
+            >NCIt:Gene_Object</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">NDFRT:C242394</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">PRO:Gene</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string"
+            >SNOMEDCT:67271001</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">SO:0000704</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">UMLS:C0017337</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>diseasome:genes</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>pharmgkb:Gene</oboInOwl:hasDbXref>
+        <dc:description
+            >A gene is a part of DNA that encodes information about other molecular entities.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0038 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0038">
+        <rdfs:label
+            >single nucleotide polymorphism</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0005"/>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">MSH:D020641</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string"
+            >NCIt:Single_Nucleotide_Polymorphism</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">SO:0000694</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">UMLS:C0752046</oboInOwl:hasDbXref>
+        <dc:description
+            >A single-nucleotide polymorphism (SNP) is a variation at a single nucleotide in the genome (or other shared sequence) between members of a species.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0039 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0039">
+        <rdfs:label
+            >copy number variation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0005"/>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">SO:0001019</oboInOwl:hasDbXref>
+        <dc:description
+            >Copy number variation is a genetic measure of the variation in the number of copies a given region.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0040 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0040">
+        <rdfs:label
+            >drug-drug interaction</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0304"/>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string"
+            >SNOMEDCT:404204005</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>IAO:0000124</oboInOwl:hasDbXref>
+        <dc:description
+            >A drug-drug interaction is a drug interaction in which two drugs interact in such a way to produce an abnormal phenotypic event.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0041 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0041">
+        <rdfs:label
+            >disease progression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&span;Process"/>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">MSH:D018450</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string"
+            >NCIt:Disease_Progression</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">NDFRT:C7812</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">OBI:0000354</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">UMLS:C0242656</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>IAO:0000124</oboInOwl:hasDbXref>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0042 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0042">
+        <rdfs:label
+            >mechanism of action</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0033"/>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string"
+            >NCIt:Mechanism_of_Action</oboInOwl:hasDbXref>
+        <dc:description
+            >The mechanism of action is a description of processes and behaviour of a biologically active molecule in its administration into a living system.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0043 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0043">
+        <rdfs:label
+            >adverse drug event</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&span;Process"/>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">MSH:D004362</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string"
+            >SNOMEDCT:406644009</oboInOwl:hasDbXref>
+        <iao:IAO_0000119>CDISC glossary</iao:IAO_0000119>
+        <dc:description
+            >An adverse drug event is a any untoward medical occurrence in a patient or clinical investigation subject administered a pharmaceutical product and which does not necessarily have a causal relationship with this treatment. An adverse event (AE) can therefore be any unintended sign (including an abnormal laboratory finding), symptom,or disease temporally associated with the use of a medicinal (investigational) product, whether or not related to the medicinal (investigational) product.</dc:description>
+        <oboInOwl:hasDbXref
+            >sider:side_effects</oboInOwl:hasDbXref>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0044 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0044">
+        <rdfs:label>pathway</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0010"/>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">GRO:Pathway</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Galen:Pathway</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">IEV:0000001</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">MI:0619</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">NCIt:Pathway</oboInOwl:hasDbXref>
+        <iao:IAO_0000119>NCI Thesaurus</iao:IAO_0000119>
+        <iao:IAO_0000115
+            >A pathway is a set or series of interactions, often forming a network, which biologists have found useful to group together for organizational, historic, biophysical, or other reasons.</iao:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0045 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0045">
+        <rdfs:label>population</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&snap;MaterialEntity"/>
+        <oboInOwl:hasDbXref
+            >OCRe_research:Population</oboInOwl:hasDbXref>
+        <dc:description
+            >A population is a collection of organisms.</dc:description>
+        <oboInOwl:hasDbXref
+            >dcterms:AgentClass</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>IAO:0000120</oboInOwl:hasDbXref>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0046 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0046">
+        <rdfs:label
+            >arm of clinical study</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0045"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo2;OBI_0000316"/>
+                <owl:someValuesFrom rdf:resource="&transmed;TMO_0060"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <oboInOwl:hasDbXref>IAO:0000120</oboInOwl:hasDbXref>
+        <dc:description
+            >An arm of clinical study is a population that participates in a clinical trial and is subject to some intervention.</dc:description>
+        <oboInOwl:hasDbXref
+            >linkedct:trial_arm_group</oboInOwl:hasDbXref>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0047 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0047">
+        <rdfs:label>disease</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&snap;Disposition"/>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">ACGT:Disease</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">BIRNLex:11013</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">DOID:4</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">GRO:Disease</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">LNC:LP21006-9</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">MSH:D004194</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string"
+            >NCIt:Disease_or_Disorder</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">NDFRT:C2140</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">OBI:0000155</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">UMLS:C0012634</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref
+            >pharmgkb:Disease</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref
+            >linkedct:condition</oboInOwl:hasDbXref>
+        <dc:description
+            >A disposition (i) to undergo pathological processes that (ii) exists in an organism because of one or more disorders in that organism.</dc:description>
+        <oboInOwl:hasDbXref
+            >diseasome:diseases</oboInOwl:hasDbXref>
+        <iao:IAO_0000119
+            >Richard Scheuermann, Werner Ceusters, Barry Smith in &quot;Toward an Ontological Treatment of Disease and Diagnosis&quot;</iao:IAO_0000119>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0048 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0048">
+        <rdfs:label>allele</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0005"/>
+        <oboInOwl:hasDbXref>SO:0001023</oboInOwl:hasDbXref>
+        <dc:description
+            >An allele is a genetic measure that indicates one a set of coexisting gene variants.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0049 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0049">
+        <rdfs:label>metabolite role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0073"/>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">CHEBI:25212</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string"
+            >Galen:Metabolite</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">LNC:LP20702-4</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">NCIt:Metabolite</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">UMLS:C0870883</oboInOwl:hasDbXref>
+        <dc:description
+            >A metabolite role is the role played by a material entity that is a metabolic substrate, intermediate or product.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0050 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0050">
+        <rdfs:label
+            >measure of drug efficacy</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0033"/>
+        <oboInOwl:hasDbXref>IAO:0000124</oboInOwl:hasDbXref>
+        <dc:description
+            >Measure of drug efficacy is a measure of the capabilty of a drug to produce an intended effect.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0051 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0051">
+        <rdfs:label
+            >treatment safety</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0033"/>
+        <oboInOwl:hasDbXref>IAO:0000124</oboInOwl:hasDbXref>
+        <iao:IAO_0000119>NCI Thesaurus</iao:IAO_0000119>
+        <dc:description
+            >Treatment safety is a condition that refers to an absence of harmful side effects resulting from use of the product and may be assessed by laboratory testing of biological samples, special tests and procedures, psychiatric evaluation, and/or physical examination of subjects.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0052 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0052">
+        <rdfs:label>biomarker</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0024"/>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">MSH:D054316</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">NCIt:Biomarker</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">UMLS:C1955886</oboInOwl:hasDbXref>
+        <dc:description
+            >A biomarker is a characteristic of a material entity that is objectively measured and evaluated as an indicator of normal biological processes, pathogenic processes, or pharmacologic responses to a therapeutic intervention.</dc:description>
+        <oboInOwl:hasDbXref>IAO:0000121</oboInOwl:hasDbXref>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0053 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0053">
+        <rdfs:label
+            >comparative effectiveness</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0033"/>
+        <oboInOwl:hasDbXref>IAO:0000121</oboInOwl:hasDbXref>
+        <dc:description
+            >Comparative effectiveness is a drug measure that provides information about which treatment works best, for whom, and under what circumstances.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0054 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0054">
+        <rdfs:label
+            >lifestyle measure</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0024"/>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">MSH:D008019</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">NCIt:Lifestyle</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string"
+            >SNOMEDCT:134436002</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string"
+            >SNOMEDCT:366925008</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string"
+            >SNOMEDCT:367150003</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">UMLS:C0023676</oboInOwl:hasDbXref>
+        <dc:description
+            >Lifestyle measure is a medical measure that consists of information gathered about the patient&#39;s manner of living.</dc:description>
+        <oboInOwl:hasDbXref>IAO:0000121</oboInOwl:hasDbXref>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0055 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0055">
+        <rdfs:label>health outcome</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0024"/>
+        <oboInOwl:hasDbXref>IAO:0000121</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref
+            >linkedct:secondary_outcomes</oboInOwl:hasDbXref>
+        <dc:description
+            >A health outcome is a medical measure of health or loss of health.</dc:description>
+        <oboInOwl:hasDbXref
+            >linkedct:primary_outcomes</oboInOwl:hasDbXref>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0056 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0056">
+        <rdfs:label>toxicity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0033"/>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">ACGT:Toxicity</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">MSH:Q000633</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">NCIt:Toxicity</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">UMLS:C0600688</oboInOwl:hasDbXref>
+        <dc:description
+            >toxicity is a measure of the degree to which a substance is able to damage an exposed organism (reported in a dose dependent manner).</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0057 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0057">
+        <rdfs:label>dosage</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0033"/>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">EFO:0000428</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">LNC:LP6801-7</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">NCIt:Dose</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string"
+            >SNOMEDCT:260911001</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">UMLS:C0178602</oboInOwl:hasDbXref>
+        <dc:description
+            >Dosage is the amount of a chemical administered to, or taken by, an organism and expressed as some function of the organism and of time (mg/kg body weight/day).</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0058 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0058">
+        <rdfs:label>syndrome</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0024"/>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">ACGT:Syndrome</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">DOID:225</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">EFO:0000428</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">EFO:0000716</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">MSH:D013577</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">NCIt:Syndrome</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">UMLS:C0039082</oboInOwl:hasDbXref>
+        <dc:description
+            >A syndrome is a medical measure composed of a group of signs and symptoms that occur together and characterize a particular abnormality.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0059 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0059">
+        <rdfs:label>hypothesis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo2;IAO_0000030"/>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">NCIt:Hypothesis</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">OBI:0000074</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">UMLS:C1512571</oboInOwl:hasDbXref>
+        <dc:description
+            >A hypothesis is an information content entity that describes a possible correlation between two or more variables.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0060 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0060">
+        <rdfs:label
+            >clinical subject role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0006"/>
+        <oboInOwl:hasDbXref
+            >OCRe_clinical:Subject</oboInOwl:hasDbXref>
+        <dc:description
+            >A clinical subject role is the role played by an organism who is the subject of a clinical procedure or assessment.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0061 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0061">
+        <rdfs:label
+            >family medical history</rdfs:label>
+        <rdfs:label>side effect</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0024"/>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string"
+            >NCIt:Side_Effect</oboInOwl:hasDbXref>
+        <dc:description
+            >A family medical history is record of a patient&#39;s family and their interactions with members of the medical profession.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0062 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0062">
+        <rdfs:label
+            >pharmaceutical ingredient role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0073"/>
+        <dc:description
+            >A pharmaceutical ingredient role is a role played by a chemical substance that is part of a pharmaceutical formulation.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0063 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0063">
+        <rdfs:label
+            >chemical substance</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&snap;MaterialEntity"/>
+        <dc:description
+            >A chemical substance is a material entity consisting of many chemical entities.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0064 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0064">
+        <rdfs:label
+            >active ingredient role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0062"/>
+        <dc:description
+            >An active ingredient role is a role played by a chemical substance which has the disposition to treat a certain disease and is part of a pharmaceutical formulation.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0065 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0065">
+        <rdfs:label
+            >inactive ingredient role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0062"/>
+        <dc:description
+            >An inactive ingredient role is a role played by a chemical substance which is part of a pharmaceutical formulation but does not have the disposition to treat a certain disease.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0066 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0066">
+        <rdfs:label
+            >molecular target</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&transmed;TMO_0034"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo2;OBI_0000316"/>
+                        <owl:someValuesFrom rdf:resource="&transmed;TMO_0072"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0034"/>
+        <dc:description
+            >A molecular target is a molecular entity that is the target of a transformation process.</dc:description>
+        <oboInOwl:hasDbXref
+            >drugbank:targets</oboInOwl:hasDbXref>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0067 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0067">
+        <rdfs:label>protein target</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&transmed;TMO_0035"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo2;OBI_0000316"/>
+                        <owl:someValuesFrom rdf:resource="&transmed;TMO_0072"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0035"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0068 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0068">
+        <rdfs:label
+            >diagnostic criterion</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo2;IAO_0000033"/>
+        <dc:description
+            >A diagnostic criterion is a directive information entity for consideration during a diagnosis which, if satisfied, contributes to a diagnostic result</dc:description>
+        <oboInOwl:hasDbXref>IAO:0000124</oboInOwl:hasDbXref>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0069 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0069">
+        <rdfs:label
+            >diagnostic inclusion criterion</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0068"/>
+        <dc:description
+            >A diagnostic inclusion criterion is a diagnostic criterion for consideration during a diagnosis which, if satisfied, supports a diagnostic result.</dc:description>
+        <oboInOwl:hasDbXref>IAO:0000124</oboInOwl:hasDbXref>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0070 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0070">
+        <rdfs:label
+            >diagnostic exclusion criterion</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0068"/>
+        <dc:description
+            >A diagnostic exclusion criterion is a diagnostic criterion for consideration during a diagnosis which, if satisfied, excludes a diagnostic result.</dc:description>
+        <oboInOwl:hasDbXref>IAO:0000124</oboInOwl:hasDbXref>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0071 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0071">
+        <rdfs:label
+            >pharmaceutical ingredient</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0063"/>
+        <oboInOwl:hasDbXref
+            >dailymed:ingredients</oboInOwl:hasDbXref>
+        <dc:description
+            >A pharmaceutical ingredient is a chemical substance that is part of a formulated pharmaceutical that bears a pharmaceutical ingredient role.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0072 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0072">
+        <rdfs:label
+            >molecular target role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0073"/>
+        <dc:description
+            >A molecular target role is a role played by a chemical entity in which it is a specific target of an intervention that aims to change it behavior.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0073 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0073">
+        <rdfs:label
+            >chemical entity role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&snap;Role"/>
+        <dc:description
+            >A chemical entity role is a role played by a chemical entity.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0074 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0074">
+        <rdfs:label>expert role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&snap;Role"/>
+        <dc:description
+            >An expert role is a role played by a knowledgeable person.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0075 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0075">
+        <rdfs:label>planned process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&span;Process"/>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">BIRNLex:11021</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">OBI:0000011</oboInOwl:hasDbXref>
+        <dc:description
+            >A planned process is a process in which specific objectives are realized in a plan designed by some agent.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0076 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0076">
+        <rdfs:label>assay</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0075"/>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">BIRNLex:11025</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">EFO:0001455</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Galen:Assay</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">MSH:Q000032</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">NCIt:Assay</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">PATO:0000003</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string"
+            >SNOMEDCT:272392009</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">UMLS:C1510438</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string"
+            >cto_asyont:Assay</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>OBI:0000070</oboInOwl:hasDbXref>
+        <dc:description
+            >An assay is a planned process with the objective to obtain information about a material entity.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0077 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0077">
+        <rdfs:label
+            >clinical trial criterion</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo2;IAO_0000033"/>
+        <dc:description
+            >A clinical trial criterion is a directive information entity which, if satisfied, contributes to the inclusion or exclusion of candidate patients.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0078 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0078">
+        <rdfs:label>enzyme</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&transmed;TMO_0035"/>
+        <oboInOwl:hasDbXref
+            >drugbank:enzymes</oboInOwl:hasDbXref>
+        <dc:description
+            >An enzyme is a protein that catalyzes (increases the rate of) a chemical reaction.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0304 -->
+
+    <owl:Class rdf:about="&transmed;TMO_0304">
+        <rdfs:label
+            >drug interaction</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&span;Process"/>
+        <oboInOwl:hasDbXref
+            >pharmgkb:Association</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref
+            >pharmgkb:DrugGeneVariantInteraction</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref
+            >drugbank:drug_interactions</oboInOwl:hasDbXref>
+        <dc:description
+            >A drug interaction is a process in which a drug interacts with a living system in such a way that it affects its behaviour.</dc:description>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+
