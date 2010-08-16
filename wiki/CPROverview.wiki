@@ -43,7 +43,7 @@ The cpr:clinical-act and its subordinate terms reflect this care activity hierar
 
 == Findings ==
 
-[http://cpr-ontology.googlecode.com/files/finding.jpg]
+[http://cpr-ontology.googlecode.com/files/clinical-findings.png]
 
 == Clinical Situations ==
 
@@ -57,8 +57,7 @@ Many of the insights of Caroline Whitbeck regarding the historical context of th
 
 She also provides a basis for the involvement of an etiological agent in the classification of a disease.  
 
-[http://cpr-ontology.googlecode.com/files/disease-1.jpg]
-[http://cpr-ontology.googlecode.com/files/disease-2.jpg]
+[http://cpr-ontology.googlecode.com/files/pathological-disposition.png]
 
 == Clinical Hypothesis ==
 
