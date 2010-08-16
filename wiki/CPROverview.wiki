@@ -81,6 +81,8 @@ medical record terms needs to accommodate terms associated with informatics arti
 
 == Problem Orientation ==
 
+[http://cpr-ontology.googlecode.com/files/medical-problems.png]
+
 == Stative Conditions ==
 
 == Procedures ==
