@@ -67,7 +67,7 @@ Whitbeck provides an ontological basis for clinical diagnoses, how they fit into
 
 This was taken into account in the definition of *clinical-analysis-act*.
 
-[http://cpr-ontology.googlecode.com/files/diagnoses.jpg]
+[http://cpr-ontology.googlecode.com/files/clnical-diagnosis.png]
 
 == Anatomy ==
 
@@ -86,3 +86,5 @@ medical record terms needs to accommodate terms associated with informatics arti
 == Stative Conditions ==
 
 == Procedures ==
+
+http://cpr-ontology.googlecode.com/files/procedures.png
