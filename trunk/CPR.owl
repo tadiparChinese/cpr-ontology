@@ -86,7 +86,7 @@
      -->
 
 
-    <!-- http://purl.org/cpr/0.9#actsOn -->
+    <!-- http://purl.org/cpr/actsOn -->
 
     <owl:ObjectProperty rdf:about="&cpr;actsOn">
         <rdfs:label>acts on anatomy</rdfs:label>
@@ -107,7 +107,7 @@
     
 
 
-    <!-- http://purl.org/cpr/0.9#approachSite -->
+    <!-- http://purl.org/cpr/approachSite -->
 
     <owl:ObjectProperty rdf:about="&cpr;approachSite">
         <rdfs:range rdf:resource="&cpr;immaterial-anatomical-continuant"/>
@@ -119,7 +119,7 @@
     
 
 
-    <!-- http://purl.org/cpr/0.9#composedBy -->
+    <!-- http://purl.org/cpr/composedBy -->
 
     <owl:ObjectProperty rdf:about="&cpr;composedBy">
         <rdfs:label>composed by</rdfs:label>
@@ -131,7 +131,7 @@
     
 
 
-    <!-- http://purl.org/cpr/0.9#findingSite -->
+    <!-- http://purl.org/cpr/findingSite -->
 
     <owl:ObjectProperty rdf:about="&cpr;findingSite">
         <dc:source rdf:datatype="&xsd;anyURI"
@@ -145,7 +145,7 @@
         <rdfs:subPropertyOf rdf:resource="&ro;located_in"/>
     </owl:ObjectProperty>
 
-    <!-- http://purl.org/cpr/0.9#hasConsequence -->
+    <!-- http://purl.org/cpr/hasConsequence -->
 
     <owl:ObjectProperty rdf:about="&cpr;hasConsequence">
         <rdfs:label>has consequence</rdfs:label>
@@ -157,7 +157,7 @@
     </owl:ObjectProperty>
     
 
-    <!-- http://purl.org/cpr/0.9#hasContraindication -->
+    <!-- http://purl.org/cpr/hasContraindication -->
 
     <owl:ObjectProperty rdf:about="&cpr;hasContraindication">
         <rdfs:label>has contraindication</rdfs:label>
@@ -168,7 +168,7 @@ act is inadvisable by virtue of the entity</skos:definition>
     </owl:ObjectProperty>
     
 
-    <!-- http://purl.org/cpr/0.9#hasIndication -->
+    <!-- http://purl.org/cpr/hasIndication -->
 
     <owl:ObjectProperty rdf:about="&cpr;hasIndication">
         <rdfs:label>has indication</rdfs:label>
@@ -180,7 +180,7 @@ by virtue of the entity</rdfs:comment>
     </owl:ObjectProperty>
     
 
-    <!-- http://purl.org/cpr/0.9#hasInput -->
+    <!-- http://purl.org/cpr/hasInput -->
 
     <owl:ObjectProperty rdf:about="&cpr;hasInput">
         <rdfs:label>has input</rdfs:label>
@@ -192,7 +192,7 @@ by virtue of the entity</rdfs:comment>
     </owl:ObjectProperty>
     
 
-    <!-- http://purl.org/cpr/0.9#hasMethod -->
+    <!-- http://purl.org/cpr/hasMethod -->
 
     <owl:ObjectProperty rdf:about="&cpr;hasMethod">
         <rdfs:label>surgical method</rdfs:label>
@@ -202,7 +202,7 @@ by virtue of the entity</rdfs:comment>
     </owl:ObjectProperty>
     
 
-    <!-- http://purl.org/cpr/0.9#hasOutput -->
+    <!-- http://purl.org/cpr/hasOutput -->
 
     <owl:ObjectProperty rdf:about="&cpr;hasOutput">
         <rdfs:label>has output</rdfs:label>
@@ -213,7 +213,7 @@ performed by one or more actors (with an informatics role) that participate</sko
         <rdfs:domain rdf:resource="&span;Process"/>
     </owl:ObjectProperty>
     
-    <!-- http://purl.org/cpr/0.9#hasRole -->
+    <!-- http://purl.org/cpr/hasRole -->
 
     <owl:ObjectProperty rdf:about="&cpr;hasRole">
         <rdfs:domain>
@@ -224,7 +224,7 @@ performed by one or more actors (with an informatics role) that participate</sko
 
 
 
-    <!-- http://purl.org/cpr/0.9#hypothesizedProblem -->
+    <!-- http://purl.org/cpr/hypothesizedProblem -->
 
     <owl:ObjectProperty rdf:about="&cpr;hypothesizedProblem">
         <rdfs:label>hypothesized problem</rdfs:label>
@@ -237,7 +237,7 @@ performed by one or more actors (with an informatics role) that participate</sko
     
 
 
-    <!-- http://purl.org/cpr/0.9#includes -->
+    <!-- http://purl.org/cpr/includes -->
 
     <owl:ObjectProperty rdf:about="&cpr;includes">
         <skos:definition
@@ -249,7 +249,7 @@ performed by one or more actors (with an informatics role) that participate</sko
     
 
 
-    <!-- http://purl.org/cpr/0.9#investigates -->
+    <!-- http://purl.org/cpr/investigates -->
 
     <owl:ObjectProperty rdf:about="&cpr;investigates">
         <skos:definition
@@ -257,13 +257,13 @@ performed by one or more actors (with an informatics role) that participate</sko
     </owl:ObjectProperty>
     
 
-    <!-- http://purl.org/cpr/0.9#isConsequenceOf -->
+    <!-- http://purl.org/cpr/isConsequenceOf -->
 
     <owl:ObjectProperty rdf:about="&cpr;isConsequenceOf"/>
     
 
 
-    <!-- http://purl.org/cpr/0.9#isContraindicationFor -->
+    <!-- http://purl.org/cpr/isContraindicationFor -->
 
     <owl:ObjectProperty rdf:about="&cpr;isContraindicationFor">
         <owl:inverseOf rdf:resource="&cpr;hasContraindication"/>
@@ -271,7 +271,7 @@ performed by one or more actors (with an informatics role) that participate</sko
     
 
 
-    <!-- http://purl.org/cpr/0.9#isIndicationFor -->
+    <!-- http://purl.org/cpr/isIndicationFor -->
 
     <owl:ObjectProperty rdf:about="&cpr;isIndicationFor">
         <rdfs:range rdf:resource="&cpr;procedure"/>
@@ -308,7 +308,7 @@ performed by one or more actors (with an informatics role) that participate</sko
     </owl:DatatypeProperty>
 
 
-    <!-- http://purl.org/cpr/0.9#outputOf -->
+    <!-- http://purl.org/cpr/outputOf -->
 
     <owl:ObjectProperty rdf:about="&cpr;outputOf">
         <rdfs:comment rdf:datatype="&xsd;anyURI"
@@ -320,7 +320,7 @@ performed by one or more actors (with an informatics role) that participate</sko
     
 
 
-    <!-- http://purl.org/cpr/0.9#representationOf -->
+    <!-- http://purl.org/cpr/representationOf -->
 
     <owl:ObjectProperty rdf:about="&cpr;representationOf">
         <rdfs:label>a representation of</rdfs:label>
@@ -335,7 +335,7 @@ performed by one or more actors (with an informatics role) that participate</sko
     </owl:ObjectProperty>
     
     
-    <!-- http://purl.org/cpr/0.9#isComplicationOf -->
+    <!-- http://purl.org/cpr/isComplicationOf -->
 
     <owl:ObjectProperty rdf:about="&cpr;measurementOf">
         <rdfs:label>measurement of</rdfs:label>
@@ -351,7 +351,7 @@ performed by one or more actors (with an informatics role) that participate</sko
     </owl:ObjectProperty>
 
 
-    <!-- http://purl.org/cpr/0.9#representedBy -->
+    <!-- http://purl.org/cpr/representedBy -->
 
     <owl:ObjectProperty rdf:about="&cpr;representedBy">
         <owl:inverseOf rdf:resource="&cpr;representationOf"/>
@@ -359,7 +359,7 @@ performed by one or more actors (with an informatics role) that participate</sko
     
 
 
-    <!-- http://purl.org/cpr/0.9#subjectOfDescription -->
+    <!-- http://purl.org/cpr/subjectOfDescription -->
 
     <owl:ObjectProperty rdf:about="&cpr;subjectOfDescription">
         <rdfs:label>subject of clinical record</rdfs:label>
@@ -557,7 +557,7 @@ whom it represents</rdfs:comment>
     </owl:Class>
 
 
-    <!-- http://purl.org/cpr/0.9#anamnesis -->
+    <!-- http://purl.org/cpr/anamnesis -->
 
     <owl:Class rdf:about="&cpr;anamnesis">
         <rdfs:label>case history</rdfs:label>
@@ -578,7 +578,7 @@ whom it represents</rdfs:comment>
     
 
 
-    <!-- http://purl.org/cpr/0.9#anatomical-boundary-entity -->
+    <!-- http://purl.org/cpr/anatomical-boundary-entity -->
 
     <owl:Class rdf:about="&cpr;anatomical-boundary-entity">
         <rdfs:label
@@ -594,7 +594,7 @@ whom it represents</rdfs:comment>
     
 
 
-    <!-- http://purl.org/cpr/0.9#anatomical-space -->
+    <!-- http://purl.org/cpr/anatomical-space -->
 
     <owl:Class rdf:about="&cpr;anatomical-space">
         <rdfs:label
@@ -612,7 +612,7 @@ whom it represents</rdfs:comment>
     
 
 
-    <!-- http://purl.org/cpr/0.9#anatomical-structure -->
+    <!-- http://purl.org/cpr/anatomical-structure -->
 
     <owl:Class rdf:about="&cpr;anatomical-structure">
         <rdfs:label
@@ -630,7 +630,7 @@ whom it represents</rdfs:comment>
     
 
 
-    <!-- http://purl.org/cpr/0.9#anatomical-surface -->
+    <!-- http://purl.org/cpr/anatomical-surface -->
 
     <owl:Class rdf:about="&cpr;anatomical-surface">
         <rdfs:label
@@ -658,7 +658,7 @@ whom it represents</rdfs:comment>
         </rdfs:subClassOf>
     </owl:Class>
 
-    <!-- http://purl.org/cpr/0.9#clinical-act -->
+    <!-- http://purl.org/cpr/clinical-act -->
 
     <owl:Class rdf:about="&cpr;clinical-act">
         <rdfs:label>Clinical Act</rdfs:label>
@@ -691,7 +691,7 @@ whom it represents</rdfs:comment>
     
 
 
-    <!-- http://purl.org/cpr/0.9#clinical-administration-act -->
+    <!-- http://purl.org/cpr/clinical-administration-act -->
 
     <owl:Class rdf:about="&cpr;clinical-administration-act">
         <rdfs:label
@@ -705,7 +705,7 @@ whom it represents</rdfs:comment>
     
 
 
-    <!-- http://purl.org/cpr/0.9#clinical-analysis-act -->
+    <!-- http://purl.org/cpr/clinical-analysis-act -->
 
     <owl:Class rdf:about="&cpr;clinical-analysis-act">
         <rdfs:label
@@ -715,7 +715,7 @@ whom it represents</rdfs:comment>
     
 
 
-    <!-- http://purl.org/cpr/0.9#clinical-artifact -->
+    <!-- http://purl.org/cpr/clinical-artifact -->
 
     <owl:Class rdf:about="&cpr;clinical-artifact">
         <rdfs:label>clinical artifact</rdfs:label>
@@ -751,7 +751,7 @@ whom it represents</rdfs:comment>
     
 
 
-    <!-- http://purl.org/cpr/0.9#clinical-diagnosis -->
+    <!-- http://purl.org/cpr/clinical-diagnosis -->
 
     <owl:Class rdf:about="&cpr;clinical-diagnosis">
         <rdfs:label>clinical diagnosis</rdfs:label>
@@ -796,7 +796,7 @@ whom it represents</rdfs:comment>
     
 
 
-    <!-- http://purl.org/cpr/0.9#clinical-examination -->
+    <!-- http://purl.org/cpr/clinical-examination -->
 
     <owl:Class rdf:about="&cpr;clinical-examination">
         <rdfs:label
@@ -810,7 +810,7 @@ whom it represents</rdfs:comment>
     
 
 
-    <!-- http://purl.org/cpr/0.9#clinical-finding -->
+    <!-- http://purl.org/cpr/clinical-finding -->
 
     <owl:Class rdf:about="&cpr;clinical-finding">
         <rdfs:label>clinical finding</rdfs:label>
@@ -852,7 +852,7 @@ whom it represents</rdfs:comment>
     
 
 
-    <!-- http://purl.org/cpr/0.9#clinical-investigation-act -->
+    <!-- http://purl.org/cpr/clinical-investigation-act -->
 
     <owl:Class rdf:about="&cpr;clinical-investigation-act">
         <rdfs:label
@@ -893,7 +893,7 @@ whom it represents</rdfs:comment>
     </owl:Class>
     
 
-    <!-- http://purl.org/cpr/0.9#clinician-role -->
+    <!-- http://purl.org/cpr/clinician-role -->
 
     <owl:Class rdf:about="&cpr;clinician-role">
         <rdfs:label>Clinician role</rdfs:label>
@@ -904,13 +904,13 @@ whom it represents</rdfs:comment>
     
 
 
-    <!-- http://purl.org/cpr/0.9#computer-system -->
+    <!-- http://purl.org/cpr/computer-system -->
 
     <owl:Class rdf:about="&cpr;computer-system">
         <rdfs:subClassOf rdf:resource="&snap;Object"/>
     </owl:Class>
 
-    <!-- http://purl.org/cpr/0.9#diagnostic-image -->
+    <!-- http://purl.org/cpr/diagnostic-image -->
 
     <owl:Class rdf:about="&cpr;diagnostic-image">
         <rdfs:subClassOf rdf:resource="&cpr;image"/>
@@ -926,7 +926,7 @@ whom it represents</rdfs:comment>
     
 
 
-    <!-- http://purl.org/cpr/0.9#diagnostic-procedure -->
+    <!-- http://purl.org/cpr/diagnostic-procedure -->
 
     <owl:Class rdf:about="&cpr;diagnostic-procedure">
         <rdfs:label
@@ -936,7 +936,7 @@ whom it represents</rdfs:comment>
     
 
 
-    <!-- http://purl.org/cpr/0.9#etiologic-agent -->
+    <!-- http://purl.org/cpr/etiologic-agent -->
 
     <owl:Class rdf:about="&cpr;etiologic-agent">
         <rdfs:label
@@ -960,7 +960,7 @@ mode of classification. (Caroline Whitbeck)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/cpr/0.9#extra-organismal-continuant -->
+    <!-- http://purl.org/cpr/extra-organismal-continuant -->
 
     <owl:Class rdf:about="&cpr;extra-organismal-continuant">
         <rdfs:label
@@ -982,7 +982,7 @@ mode of classification. (Caroline Whitbeck)</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&snap;Object"/>
     </owl:Class>
 
-    <!-- http://purl.org/cpr/0.9#genetic-disorder -->
+    <!-- http://purl.org/cpr/genetic-disorder -->
 
     <owl:Class rdf:about="&cpr;genetic-abnormality">
         <rdfs:subClassOf rdf:resource="&cpr;etiologic-agent"/>
@@ -997,7 +997,7 @@ mode of classification. (Caroline Whitbeck)</rdfs:comment>
         </skos:definition>        
     </owl:Class>
 
-    <!-- http://purl.org/cpr/0.9#idiopathic-disease -->
+    <!-- http://purl.org/cpr/idiopathic-disease -->
 
     <owl:Class rdf:about="&cpr;idiopathic-disease">
         <skos:definition
@@ -1007,7 +1007,7 @@ mode of classification. (Caroline Whitbeck)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/cpr/0.9#image -->
+    <!-- http://purl.org/cpr/image -->
 
     <owl:Class rdf:about="&cpr;image">
         <rdfs:label>image</rdfs:label>
@@ -1020,7 +1020,7 @@ mode of classification. (Caroline Whitbeck)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/cpr/0.9#immaterial-anatomical-continuant -->
+    <!-- http://purl.org/cpr/immaterial-anatomical-continuant -->
 
     <owl:Class rdf:about="&cpr;immaterial-anatomical-continuant">
         <rdfs:label
@@ -1034,7 +1034,7 @@ mode of classification. (Caroline Whitbeck)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/cpr/0.9#immaterial-pathological-continuant -->
+    <!-- http://purl.org/cpr/immaterial-pathological-continuant -->
 
     <owl:Class rdf:about="&cpr;immaterial-pathological-continuant">
         <rdfs:label
@@ -1048,7 +1048,7 @@ mode of classification. (Caroline Whitbeck)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/cpr/0.9#infectious-disease -->
+    <!-- http://purl.org/cpr/infectious-disease -->
 
     <owl:Class rdf:about="&cpr;infectious-disease">
         <rdfs:subClassOf rdf:resource="&cpr;pathological-disposition"/>
@@ -1062,7 +1062,7 @@ mode of classification. (Caroline Whitbeck)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/cpr/0.9#laboratory-test -->
+    <!-- http://purl.org/cpr/laboratory-test -->
 
     <owl:Class rdf:about="&cpr;laboratory-test">
         <rdfs:label>Laboratory test</rdfs:label>
@@ -1079,7 +1079,7 @@ mode of classification. (Caroline Whitbeck)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/cpr/0.9#longitudinal-patient-medical-history -->
+    <!-- http://purl.org/cpr/longitudinal-patient-medical-history -->
 
     <owl:Class rdf:about="&cpr;longitudinal-patient-medical-history">
         <rdfs:label
@@ -1090,7 +1090,7 @@ mode of classification. (Caroline Whitbeck)</rdfs:comment>
     </owl:Class>
 
 
-    <!-- http://purl.org/cpr/0.9#material-pathological-entity -->
+    <!-- http://purl.org/cpr/material-pathological-entity -->
 
     <owl:Class rdf:about="&cpr;material-pathological-entity">
         <rdfs:label
@@ -1123,7 +1123,7 @@ mode of classification. (Caroline Whitbeck)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/cpr/0.9#medical-device -->
+    <!-- http://purl.org/cpr/medical-device -->
 
     <owl:Class rdf:about="&cpr;medical-device">
         <rdfs:subClassOf rdf:resource="&snap;Object"/>
@@ -1131,7 +1131,7 @@ mode of classification. (Caroline Whitbeck)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/cpr/0.9#medical-history-screening-act -->
+    <!-- http://purl.org/cpr/medical-history-screening-act -->
 
     <owl:Class rdf:about="&cpr;medical-history-screening-act">
         <rdfs:label
@@ -1147,7 +1147,7 @@ mode of classification. (Caroline Whitbeck)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/cpr/0.9#medical-problem -->
+    <!-- http://purl.org/cpr/medical-problem -->
 
     <owl:Class rdf:about="&cpr;medical-problem">
         <rdfs:label>medical problem</rdfs:label>
@@ -1191,7 +1191,7 @@ mode of classification. (Caroline Whitbeck)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/cpr/0.9#medical-therapy -->
+    <!-- http://purl.org/cpr/medical-therapy -->
 
     <owl:Class rdf:about="&cpr;medical-therapy">
         <rdfs:label>Medical therapy</rdfs:label>
@@ -1200,7 +1200,7 @@ mode of classification. (Caroline Whitbeck)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/cpr/0.9#medication -->
+    <!-- http://purl.org/cpr/medication -->
 
     <owl:Class rdf:about="&cpr;medication">
         <rdfs:label>Medication</rdfs:label>
@@ -1221,7 +1221,7 @@ mode of classification. (Caroline Whitbeck)</rdfs:comment>
     
 
 
-    <!-- http://purl.org/cpr/0.9#not-otherwise-specifiable-disease -->
+    <!-- http://purl.org/cpr/not-otherwise-specifiable-disease -->
 
     <owl:Class rdf:about="&cpr;not-otherwise-specifiable-disease">
         <rdfs:subClassOf rdf:resource="&cpr;pathological-disposition"/>
@@ -1234,7 +1234,7 @@ mode of classification. (Caroline Whitbeck)</rdfs:comment>
         <skos:definition>Any living individual, whether plant or animal, considered as a whole.</skos:definition>
     </owl:Class>
 
-    <!-- http://purl.org/cpr/0.9#organismal-continuant -->
+    <!-- http://purl.org/cpr/organismal-continuant -->
 
     <owl:Class rdf:about="&cpr;organismal-continuant">
         <rdfs:label
@@ -1282,7 +1282,7 @@ features of a disease</skos:editorialNote>
         </rdfs:subClassOf>
     </owl:Class>
 
-    <!-- http://purl.org/cpr/0.9#organismal-process-aggregate -->
+    <!-- http://purl.org/cpr/organismal-process-aggregate -->
 
     <owl:Class rdf:about="&cpr;organismal-process-aggregate">
         <rdfs:label
@@ -1294,7 +1294,7 @@ features of a disease</skos:editorialNote>
     
 
 
-    <!-- http://purl.org/cpr/0.9#pathogen -->
+    <!-- http://purl.org/cpr/pathogen -->
 
     <owl:Class rdf:about="&cpr;pathogen">
         <rdfs:label>pathogen</rdfs:label>
@@ -1314,7 +1314,7 @@ features of a disease</skos:editorialNote>
     
 
 
-    <!-- http://purl.org/cpr/0.9#pathological-disposition -->
+    <!-- http://purl.org/cpr/pathological-disposition -->
 
     <owl:Class rdf:about="&cpr;pathological-disposition">
         <rdfs:label
@@ -1374,7 +1374,7 @@ features of a disease</skos:editorialNote>
             and (iv) consistent physiological or anatomical alterations</rdfs:comment>
     </owl:Class>
 
-    <!-- http://purl.org/cpr/0.9#pathological-process -->
+    <!-- http://purl.org/cpr/pathological-process -->
 
     <owl:Class rdf:about="&cpr;pathological-process">
         <rdfs:label
@@ -1390,7 +1390,7 @@ features of a disease</skos:editorialNote>
             >http://ontology.buffalo.edu/bio/OBR.pdf</dc:source>
     </owl:Class>
     
-    <!-- http://purl.org/cpr/0.9#pathological-role -->
+    <!-- http://purl.org/cpr/pathological-role -->
 
     <owl:Class rdf:about="&cpr;pathological-role">
         <rdfs:label
@@ -1402,7 +1402,7 @@ features of a disease</skos:editorialNote>
     
 
 
-    <!-- http://purl.org/cpr/0.9#patient -->
+    <!-- http://purl.org/cpr/patient -->
 
     <owl:Class rdf:about="&cpr;patient">
         <rdfs:label>Patient</rdfs:label>
@@ -1427,7 +1427,7 @@ features of a disease</skos:editorialNote>
     
 
 
-    <!-- http://purl.org/cpr/0.9#patient-record -->
+    <!-- http://purl.org/cpr/patient-record -->
 
     <owl:Class rdf:about="&cpr;patient-record">
         <rdfs:label>patient record</rdfs:label>
@@ -1452,7 +1452,7 @@ features of a disease</skos:editorialNote>
     
 
 
-    <!-- http://purl.org/cpr/0.9#patient-role -->
+    <!-- http://purl.org/cpr/patient-role -->
 
     <owl:Class rdf:about="&cpr;patient-role">
         <rdfs:label>Patient role</rdfs:label>
@@ -1464,7 +1464,7 @@ features of a disease</skos:editorialNote>
             >Role played by people who are the recipient of healthcare services</rdfs:comment>
     </owl:Class>
     
-    <!-- http://purl.org/cpr/0.9#person -->
+    <!-- http://purl.org/cpr/person -->
 
     <owl:Class rdf:about="&cpr;person">
         <rdfs:label>Human / person</rdfs:label>
@@ -1479,7 +1479,7 @@ features of a disease</skos:editorialNote>
     
 
 
-    <!-- http://purl.org/cpr/0.9#pharmacological-substance -->
+    <!-- http://purl.org/cpr/pharmacological-substance -->
 
     <owl:Class rdf:about="&cpr;pharmacological-substance">
         <rdfs:subClassOf rdf:resource="&snap;Object"/>
@@ -1487,7 +1487,7 @@ features of a disease</skos:editorialNote>
     
 
 
-    <!-- http://purl.org/cpr/0.9#physical-anatomical-entity -->
+    <!-- http://purl.org/cpr/physical-anatomical-entity -->
 
     <owl:Class rdf:about="&cpr;physical-anatomical-entity">
         <rdfs:label
@@ -1511,7 +1511,7 @@ features of a disease</skos:editorialNote>
     
 
 
-    <!-- http://purl.org/cpr/0.9#physical-therapy -->
+    <!-- http://purl.org/cpr/physical-therapy -->
 
     <owl:Class rdf:about="&cpr;physical-therapy">
         <rdfs:label
@@ -1525,7 +1525,7 @@ features of a disease</skos:editorialNote>
     
 
 
-    <!-- http://purl.org/cpr/0.9#physician -->
+    <!-- http://purl.org/cpr/physician -->
 
     <owl:Class rdf:about="&cpr;physician">
         <rdfs:label>Physician</rdfs:label>
@@ -1559,7 +1559,7 @@ features of a disease</skos:editorialNote>
     
 
 
-    <!-- http://purl.org/cpr/0.9#physician-role -->
+    <!-- http://purl.org/cpr/physician-role -->
 
     <owl:Class rdf:about="&cpr;physician-role">
         <rdfs:label>Physician role</rdfs:label>
@@ -1570,7 +1570,7 @@ features of a disease</skos:editorialNote>
     
 
 
-    <!-- http://purl.org/cpr/0.9#physiological-disposition -->
+    <!-- http://purl.org/cpr/physiological-disposition -->
 
     <owl:Class rdf:about="&cpr;physiological-disposition">
         <rdfs:label
@@ -1585,7 +1585,7 @@ features of a disease</skos:editorialNote>
     
 
 
-    <!-- http://purl.org/cpr/0.9#physiological-process -->
+    <!-- http://purl.org/cpr/physiological-process -->
 
     <owl:Class rdf:about="&cpr;physiological-process">
         <rdfs:label
@@ -1597,7 +1597,7 @@ features of a disease</skos:editorialNote>
     
 
 
-    <!-- http://purl.org/cpr/0.9#physiological-role -->
+    <!-- http://purl.org/cpr/physiological-role -->
 
     <owl:Class rdf:about="&cpr;physiological-role">
         <rdfs:label
@@ -1607,7 +1607,7 @@ features of a disease</skos:editorialNote>
     
 
 
-    <!-- http://purl.org/cpr/0.9#procedure -->
+    <!-- http://purl.org/cpr/procedure -->
 
     <owl:Class rdf:about="&cpr;procedure">
         <skos:editorialNote
@@ -1639,7 +1639,7 @@ features of a disease</skos:editorialNote>
     
 
 
-    <!-- http://purl.org/cpr/0.9#psychological-therapy -->
+    <!-- http://purl.org/cpr/psychological-therapy -->
 
     <owl:Class rdf:about="&cpr;psychological-therapy">
         <rdfs:label
@@ -1649,7 +1649,7 @@ features of a disease</skos:editorialNote>
     
 
 
-    <!-- http://purl.org/cpr/0.9#recorded-clinical-situation -->
+    <!-- http://purl.org/cpr/recorded-clinical-situation -->
 
     <owl:Class rdf:about="&cpr;recorded-clinical-situation">
         <rdfs:label>record clinical situation</rdfs:label>
@@ -1671,7 +1671,7 @@ in this hierarchy accomplish this. </rdfs:comment>
     
 
 
-    <!-- http://purl.org/cpr/0.9#representational-artifact -->
+    <!-- http://purl.org/cpr/representational-artifact -->
 
     <owl:Class rdf:about="&cpr;representational-artifact">
         <rdfs:label
@@ -1697,7 +1697,7 @@ in this hierarchy accomplish this. </rdfs:comment>
     
 
 
-    <!-- http://purl.org/cpr/0.9#screening-act -->
+    <!-- http://purl.org/cpr/screening-act -->
 
     <owl:Class rdf:about="&cpr;screening-act">
         <rdfs:subClassOf rdf:resource="&cpr;clinical-investigation-act"/>
@@ -1710,7 +1710,7 @@ in this hierarchy accomplish this. </rdfs:comment>
       questionnaires in order to discover problems.</rdfs:comment>
     </owl:Class>
 
-    <!-- http://purl.org/cpr/0.9#sign -->
+    <!-- http://purl.org/cpr/sign -->
 
     <!--owl:Class rdf:about="&cpr;sign">
         <rdfs:label>sign</rdfs:label>
@@ -1727,7 +1727,7 @@ in this hierarchy accomplish this. </rdfs:comment>
     </owl:Class-->
     
 
-    <!-- http://purl.org/cpr/0.9#sign-recording-->
+    <!-- http://purl.org/cpr/sign-recording-->
 
     <owl:Class rdf:about="&cpr;sign-recording">
         <skos:definition
@@ -1746,7 +1746,7 @@ an objective indication of disease, in contrast to a symptom, which is a subject
         <rdfs:subClassOf rdf:resource="&cpr;clinical-finding"/>
     </owl:Class>
     
-    <!-- http://purl.org/cpr/0.9#state -->
+    <!-- http://purl.org/cpr/state -->
 
     <owl:Class rdf:about="&cpr;state">
         <rdfs:subClassOf rdf:resource="&snap;DependentContinuant"/>
@@ -1764,7 +1764,7 @@ an objective indication of disease, in contrast to a symptom, which is a subject
     
 
 
-    <!-- http://purl.org/cpr/0.9#substance-administration -->
+    <!-- http://purl.org/cpr/substance-administration -->
 
     <owl:Class rdf:about="&cpr;substance-administration">
         <rdfs:label
@@ -1786,7 +1786,7 @@ an objective indication of disease, in contrast to a symptom, which is a subject
     
 
 
-    <!-- http://purl.org/cpr/0.9#symptom-recording -->
+    <!-- http://purl.org/cpr/symptom-recording -->
 
     <owl:Class rdf:about="&cpr;symptom-recording">
         <rdfs:subClassOf>
@@ -1814,7 +1814,7 @@ an objective indication of disease, in contrast to a symptom, which is a subject
 or elicitation of anamnesis and hypothesized (by the patient) to be a manifestation of a disease.</rdfs:comment>
     </owl:Class>
     
-    <!-- http://purl.org/cpr/0.9#syndrome -->
+    <!-- http://purl.org/cpr/syndrome -->
 
     <owl:Class rdf:about="&cpr;syndrome">
         <rdfs:subClassOf rdf:resource="&cpr;idiopathic-disease"/>
@@ -1822,7 +1822,7 @@ or elicitation of anamnesis and hypothesized (by the patient) to be a manifestat
     
 
 
-    <!-- http://purl.org/cpr/0.9#therapeutic-act -->
+    <!-- http://purl.org/cpr/therapeutic-act -->
 
     <owl:Class rdf:about="&cpr;therapeutic-act">
         <rdfs:label>Therapeutic act</rdfs:label>
@@ -1835,7 +1835,7 @@ or elicitation of anamnesis and hypothesized (by the patient) to be a manifestat
     
 
 
-    <!-- http://purl.org/cpr/0.9#therapeutic-procedure -->
+    <!-- http://purl.org/cpr/therapeutic-procedure -->
 
     <owl:Class rdf:about="&cpr;therapeutic-procedure">
         <rdfs:label
@@ -1861,7 +1861,7 @@ or elicitation of anamnesis and hypothesized (by the patient) to be a manifestat
     
 
 
-    <!-- http://purl.org/cpr/0.9#vital-sign -->
+    <!-- http://purl.org/cpr/vital-sign -->
 
     <owl:Class rdf:about="&cpr;vital-sign">
         <rdfs:subClassOf rdf:resource="&cpr;bodily-feature"/>
@@ -1962,7 +1962,7 @@ or elicitation of anamnesis and hypothesized (by the patient) to be a manifestat
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <!-- http://purl.org/cpr/0.9#clinical-artifact -->
+    <!-- http://purl.org/cpr/clinical-artifact -->
 </rdf:RDF>
 
 
