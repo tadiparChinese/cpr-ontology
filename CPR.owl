@@ -10,6 +10,9 @@
     <!ENTITY snap "http://www.ifomis.org/bfo/1.1/snap#" >
     <!ENTITY span "http://www.ifomis.org/bfo/1.1/span#" >
     <!ENTITY ro "http://www.obofoundry.org/ro/ro.owl#" >
+    <!ENTITY uniprot "http://purl.uniprot.org/core/" >
+    <!ENTITY go "http://purnotal.org/obo/owl/GO#" >
+    <!ENTITY oboRo "http://purl.org/obo/owl/OBO_REL#" >
     <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY muo "http://purl.oclc.org/NET/muo/muo#" >
@@ -43,6 +46,7 @@
         <dc:creator
             >Chimezie Ogbuji</dc:creator>
         <dc:contributor>Songmao Zhang</dc:contributor>
+        <dc:contributor>Alan Ruttenberg</dc:contributor>
         <dc:contributor>Michel Dumontier</dc:contributor>
         <dc:contributor>Alan Rector</dc:contributor>
         <rdfs:comment
@@ -64,11 +68,18 @@
             cause other parts or even that diseases may be causes. However,
             the effects of disease are phenomena external to the disease process,
             phenomena such as residual heart damage caused by rheumatic fever</rdfs:comment-->
-        <owl:versionInfo>Last modification: July 31th, 2011 Chimezie Ogbuji</owl:versionInfo>
+        <owl:versionInfo>Last modification: November 19th, 2011 Chimezie Ogbuji</owl:versionInfo>
+
         <owl:imports rdf:resource="http://protege.stanford.edu/plugins/owl/dc/protege-dc.owl"/>
         <owl:imports rdf:resource="http://purl.org/obo/owl/ro"/>
         <owl:imports rdf:resource="http://www.ifomis.org/bfo/1.1"/>
         <owl:imports rdf:resource="http://purl.oclc.org/NET/muo/muo-vocab.owl"/>
+        <!--owl:imports rdf:resource="file:///Users/chimezieogbuji/Projects/workspace/CaseSVNOnt/3rdParty/protege-dc.owl"/>
+        <owl:imports rdf:resource="file:///Users/chimezieogbuji/Projects/workspace/CaseSVNOnt/3rdParty/ro.owl"/>
+        <owl:imports rdf:resource="file:///Users/chimezieogbuji/Projects/workspace/CaseSVNOnt/3rdParty/bfo-1.1.owl" />
+        <owl:imports rdf:resource="file:///Users/chimezieogbuji/Projects/SemanticDB/AuthoredOntologies/3rdParty/muo-vocab.owl"/-->
+        
+        <!--owl:imports rdf:resource="ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/rdf/core.owl"/-->
     </owl:Ontology>
     
 
@@ -120,9 +131,18 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <owl:inverseOf rdf:resource="&cpr;actedUponBy"/>
     </owl:ObjectProperty>
     
-
+    <owl:ObjectProperty rdf:about="&cpr;actedUponBy">
+        <ace:TV_pl>acting procedures</ace:TV_pl>
+        <ace:TV_vbg>acting procedure</ace:TV_vbg>
+        <ace:TV_sg>procedure</ace:TV_sg>
+        <ace:PN_sg>acting procedure</ace:PN_sg>
+        <rdfs:label>acting procedure</rdfs:label>
+        <rdfs:range rdf:resource="&cpr;procedure"/>
+        <owl:inverseOf rdf:resource="&cpr;actsOn"/>
+    </owl:ObjectProperty>
 
     <!-- http://purl.org/cpr/approachSite -->
 
@@ -248,10 +268,10 @@ by virtue of the entity</rdfs:comment>
     <owl:ObjectProperty rdf:about="&cpr;hasMethod">
         <rdfs:label>surgical method</rdfs:label>
         
-        <ace:TV_pl>accomplished via</ace:TV_pl>
-        <ace:PN_sg>accomplished via</ace:PN_sg>
-        <ace:TV_vbg>accomplished via</ace:TV_vbg>
-        <ace:TV_sg>accomplished via</ace:TV_sg>        
+        <ace:TV_pl>is accomplished via</ace:TV_pl>
+        <ace:PN_sg>is accomplished via</ace:PN_sg>
+        <ace:TV_vbg>is accomplished via</ace:TV_vbg>
+        <ace:TV_sg>is accomplished via</ace:TV_sg>        
         
         <skos:definition
            >From SNOMED-CT: [..] the action being performed to accomplish the procedure</skos:definition>
@@ -544,10 +564,10 @@ whom it represents</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="&ro;agent_in">
         
-        <ace:TV_pl>actively participates in</ace:TV_pl>
-        <ace:PN_sg>actively participates in</ace:PN_sg>
-        <ace:TV_vbg>actively participates in</ace:TV_vbg>
-        <ace:TV_sg>actively participates in</ace:TV_sg>        
+        <ace:TV_pl>is realized in</ace:TV_pl>
+        <ace:PN_sg>is realized in</ace:PN_sg>
+        <ace:TV_vbg>was realized in</ace:TV_vbg>
+        <ace:TV_sg>is realized in a</ace:TV_sg>
         
     </owl:ObjectProperty>
 
@@ -591,12 +611,17 @@ whom it represents</rdfs:comment>
 
     <!-- http://www.obofoundry.org/ro/ro.owl#part_of -->
 
-    <owl:ObjectProperty rdf:about="&ro;part_of">
-        <ace:TV_pl>a part of</ace:TV_pl>
-        <ace:PN_sg>part of</ace:PN_sg>
-        <owl:inverseOf rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_part"/>
-        <ace:TV_vbg>a part of</ace:TV_vbg>
-        <ace:TV_sg>a part of</ace:TV_sg>        
+    <owl:ObjectProperty rdf:about="&oboRo;;part_of">
+        <owl:equivalentProperty>
+            <owl:ObjectProperty rdf:about="&ro;part_of">
+                <ace:TV_pl>a part of</ace:TV_pl>
+                <ace:PN_sg>part of</ace:PN_sg>
+                <!--owl:inverseOf rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_part"/-->
+                <ace:TV_vbg>a part of</ace:TV_vbg>
+                <ace:TV_sg>a part of</ace:TV_sg>
+                <owl:equivalentProperty rdf:resource="&oboRo;part_of"/>
+            </owl:ObjectProperty>
+        </owl:equivalentProperty>
     </owl:ObjectProperty>
 
 
@@ -693,8 +718,47 @@ whom it represents</rdfs:comment>
         <skos:editorialNote>Stedman's definition</skos:editorialNote>
         <owl:disjointWith rdf:resource="&cpr;vital-sign"/>
     </owl:Class>
-
-    <owl:Class rdf:about="&cpr;biological-process">
+    
+    <owl:Class rdf:about="&cpr;excised-anatomy">
+        <ace:PN_sg>excised anatomy</ace:PN_sg>
+        <ace:CN_sg>excised anatomy</ace:CN_sg>
+        <ace:CN_pl>excised anatomy</ace:CN_pl>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&cpr;actedUponBy"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&cpr;procedure"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&cpr;hasMethod"/>
+                                <owl:someValuesFrom rdf:resource="&cpr;removal"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="&cpr;anatomical-structure"/>
+    </owl:Class>    
+    
+    <owl:Class rdf:about="&cpr;adverse-event">
+        <ace:PN_sg>adverse event</ace:PN_sg>
+        <ace:CN_sg>adverse event</ace:CN_sg>
+        <ace:CN_pl>adverse events</ace:CN_pl>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&cpr;sequela"/>
+                    <rdf:Description rdf:about="&cpr;pathological-process"/>
+                </owl:intersectionOf>        
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:label>Adverse event</rdfs:label>
+    </owl:Class>
+    
+    <owl:Class rdf:about="&go;GO_0008150">
+    <!--owl:Class rdf:about="&go;biological-process"-->
         <rdfs:label>Biological process</rdfs:label>
     
         <ace:PN_sg>biological process</ace:PN_sg>
@@ -705,6 +769,14 @@ whom it represents</rdfs:comment>
           >Those processes which either take place within the human organism or
             are processes of causal interaction in which the human organism is involved.</skos:definition>
         <rdfs:subClassOf rdf:resource="&span;ProcessualEntity"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="&go;GO_0005575">
+        <rdfs:label>cellular component</rdfs:label>
+        <ace:PN_sg>cellular component</ace:PN_sg>
+        <ace:CN_sg>cellular component</ace:CN_sg>
+        <ace:CN_pl>cellular components</ace:CN_pl>
+        <rdfs:subClassOf rdf:resource="&cpr;physical-anatomical-entity"/>
     </owl:Class>
 
     <!-- http://bioontology.org/wiki/index.php/DallasWorkshop#bodily-feature -->
@@ -720,7 +792,7 @@ whom it represents</rdfs:comment>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&cpr;organismal-continuant"/>
-                    <owl:Class rdf:about="&cpr;biological-process"/>
+                    <rdf:Description rdf:about="&go;GO_0008150"/>
                     <rdf:Description rdf:about="&snap;Quality"/>
                 </owl:unionOf>
             </owl:Class>
@@ -763,7 +835,6 @@ whom it represents</rdfs:comment>
 
         <rdfs:label
             >Laboratory test finding</rdfs:label>
-            
         <ace:PN_sg>laboratory test finding</ace:PN_sg>
         <ace:CN_sg>laboratory test finding</ace:CN_sg>
         <ace:CN_pl>laboratory test findings</ace:CN_pl>            
@@ -777,13 +848,9 @@ whom it represents</rdfs:comment>
                         <owl:allValuesFrom rdf:resource="&cpr;laboratory-test"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&cpr;representationOf"/>
-                        <owl:allValuesFrom rdf:resource="&snap;Quality"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
                         <owl:onProperty rdf:resource="&cpr;measurementOf"/>
                         <owl:allValuesFrom rdf:resource="&muo;QualityValue"/>
-                    </owl:Restriction>                    
+                    </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -816,6 +883,13 @@ whom it represents</rdfs:comment>
             It does not include the surgical approach (e.g. translumbar), equipment
             (e.g. sutures), or physical forces (e.g. laser energy). </skos:editorialNote>
         <rdfs:subClassOf rdf:resource="&span;ProcessualEntity"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="&cpr;removal">
+        <rdfs:subClassOf rdf:resource="&cpr;SurgicalMethod"/>
+        <ace:PN_sg>removal</ace:PN_sg>
+        <ace:CN_sg>removal</ace:CN_sg>
+        <ace:CN_pl>removal</ace:CN_pl>
     </owl:Class>
 
 
@@ -1358,6 +1432,28 @@ mode of classification. (Caroline Whitbeck)</rdfs:comment>
         <owl:disjointWith rdf:resource="&cpr;organism"/>
         <owl:disjointWith rdf:resource="&cpr;pharmacological-substance"/>
         <rdfs:subClassOf rdf:resource="&snap;Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <owl:ObjectProperty rdf:about="&cpr;annotatedFunction">
+                        <rdfs:label>regulates physiological phenomena</rdfs:label>
+                        <skos:definition
+                                >Relates DNA to physiological phenomena and structures (as GO terms) it is purported to
+                            contribute to, as a result of scientific inquiry (necessary not sufficient conditions)</skos:definition>
+                        <rdfs:domain rdf:resource="&cpr;deoxyribonucleic-acid-strucutre"/>
+                    </owl:ObjectProperty>
+                </owl:onProperty>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&go;GO_0003674"/>
+                            <rdf:Description rdf:about="&go;GO_0008150"/>
+                            <rdf:Description rdf:about="&go;GO_0005575"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
 
     <!-- http://purl.org/cpr/genetic-disorder -->
@@ -1375,6 +1471,26 @@ mode of classification. (Caroline Whitbeck)</rdfs:comment>
                 <owl:allValuesFrom rdf:resource="&cpr;deoxyribonucleic-acid-structure"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <owl:ObjectProperty rdf:about="&cpr;disruptsPhysiology">
+                        <rdfs:label>disrupts physiology</rdfs:label>
+                        <rdfs:domain rdf:resource="&cpr;genetic-abnormality"/>
+                    </owl:ObjectProperty>
+                </owl:onProperty>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&go;GO_0003674"/>
+                            <rdf:Description rdf:about="&go;GO_0008150"/>
+                            <rdf:Description rdf:about="&go;GO_0005575"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+
         <skos:definition
             >An abnormality in the nucleotide sequence of an oranism's genome that is the etiologic agent for a genetic disease
         </skos:definition>        
@@ -1394,8 +1510,28 @@ mode of classification. (Caroline Whitbeck)</rdfs:comment>
             >.. relating to or denoting any disease or condition that arises spontaneously or for which the cause is unknown</skos:definition>        
         <rdfs:subClassOf rdf:resource="&cpr;pathological-disposition"/>
     </owl:Class>
-    
 
+    <!-- http://purl.org/cpr/idiopathic-disease -->
+
+    <owl:Class rdf:about="&cpr;genetic-disease">
+        <rdfs:label>genetic disease</rdfs:label>
+        <ace:PN_sg>genetic disease</ace:PN_sg>
+        <ace:CN_sg>genetic disease</ace:CN_sg>
+        <ace:CN_pl>genetic diseases</ace:CN_pl>
+        
+        
+        <owl:disjointWith rdf:resource="&cpr;infectious-disease"/>
+        <owl:disjointWith rdf:resource="&cpr;idiopathic-disease"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&cpr;isConsequenceOf"/>
+                <owl:someValuesFrom rdf:resource="&cpr;genetic-abnormality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>        
+        <skos:definition
+            >Disease caused by a genetic-abnormality</skos:definition>        
+        <rdfs:subClassOf rdf:resource="&cpr;pathological-disposition"/>
+    </owl:Class>
 
     <!-- http://purl.org/cpr/image -->
 
@@ -1421,10 +1557,10 @@ mode of classification. (Caroline Whitbeck)</rdfs:comment>
         <owl:disjointWith rdf:resource="&cpr;state"/>
 
         <rdfs:label
-            >Immaterial anatomical continuant</rdfs:label>
-        <ace:PN_sg>immaterial anatomical continuant</ace:PN_sg>
-        <ace:CN_sg>immaterial anatomical continuant</ace:CN_sg>
-        <ace:CN_pl>immaterial anatomical continuants</ace:CN_pl>
+            >site</rdfs:label>
+        <ace:PN_sg>site</ace:PN_sg>
+        <ace:CN_sg>site</ace:CN_sg>
+        <ace:CN_pl>sites</ace:CN_pl>
             
         <rdfs:subClassOf rdf:resource="&snap;DependentContinuant"/>
         <rdfs:seeAlso rdf:datatype="&xsd;anyURI"
@@ -1520,7 +1656,9 @@ mode of classification. (Caroline Whitbeck)</rdfs:comment>
         <ace:CN_sg>material pathological entity</ace:CN_sg>
         <ace:CN_pl>material pathological entities</ace:CN_pl>
             
-        <rdfs:subClassOf rdf:resource="&snap;MaterialEntity"/>
+        <rdfs:subClassOf>
+          <owl:Class rdf:about="&snap;MaterialEntity"/>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&ro;participates_in"/>
@@ -1673,6 +1811,7 @@ mode of classification. (Caroline Whitbeck)</rdfs:comment>
 
 
 
+
     <owl:Class rdf:about="&cpr;organism">
         <rdfs:subClassOf rdf:resource="&snap;Object"/>
         <rdfs:label>organism</rdfs:label>
@@ -1682,7 +1821,7 @@ mode of classification. (Caroline Whitbeck)</rdfs:comment>
         
         <skos:definition>Any living individual, whether plant or animal, considered as a whole.</skos:definition>
         <owl:disjointWith rdf:resource="&cpr;anatomical-structure"/>
-        <owl:disjointWith rdf:resource="&cpr;computer-system"/>
+        <owl:disjointWith rdf:resource="&cpr;anatomical-structure"/>
         <owl:disjointWith rdf:resource="&cpr;deoxyribonucleic-acid-structure"/>
         <owl:disjointWith rdf:resource="&cpr;medical-device"/>
         <owl:disjointWith rdf:resource="&cpr;pharmacological-substance"/>
@@ -1780,17 +1919,18 @@ mode of classification. (Caroline Whitbeck)</rdfs:comment>
     </owl:Class>
 
     <owl:Class rdf:about="&cpr;morphologic-alteration">
-        <rdfs:label>Process of physiological or granularity-agnostic anatomical alteration as a result of the realization
-of a pathological disposition (a disease)</rdfs:label>
-        <ace:PN_sg>morphologic alteration</ace:PN_sg>
-        <ace:CN_sg>morphologic alteration</ace:CN_sg>
-        <ace:CN_pl>morphologic alterations</ace:CN_pl>
+        <rdfs:label>morphologic alteration</rdfs:label>
+        <rdfs:comment>Process of physiological or granularity-agnostic anatomical alteration as a result of the realization
+of a pathological disposition (a disease)</rdfs:comment>
+        <ace:PN_sg>pathological morphologic alteration</ace:PN_sg>
+        <ace:CN_sg>pathological morphologic alteration</ace:CN_sg>
+        <ace:CN_pl>pathological morphologic alterations</ace:CN_pl>
 
         <rdfs:comment>..pathological changes in the structure and function of cells and tissues</rdfs:comment>
         <skos:editorialNote
           >From SNOMED-CT: [..] morphologic changes seen at the tissue or cellular level that are characteristic
 features of a disease</skos:editorialNote>
-        <rdfs:subClassOf rdf:resource="&cpr;biological-process"/>
+        <rdfs:subClassOf rdf:resource="&go;GO_0008150"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&ro;part_of"/>
@@ -1877,7 +2017,7 @@ features of a disease</skos:editorialNote>
                         <owl:someValuesFrom>
                             <owl:Class>
                                 <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="&cpr;biological-process"/>
+                                    <rdf:Description rdf:about="&cpr;pathological-process"/>
                                     <owl:Restriction>
                                         <owl:onProperty rdf:resource="&ro;has_participant"/>
                                         <owl:someValuesFrom rdf:resource="&cpr;etiologic-agent"/>
@@ -1890,11 +2030,19 @@ features of a disease</skos:editorialNote>
             </owl:Class>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&ro;located_in"/>
-                <owl:allValuesFrom rdf:resource="&cpr;patient"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                <owl:allValuesFrom rdf:resource="&cpr;patient"/>
+                            </owl:Restriction>
+                            <rdf:Description rdf:about="&cpr;patient"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1934,7 +2082,7 @@ features of a disease</skos:editorialNote>
                 <owl:someValuesFrom rdf:resource="&cpr;pathological-disposition"/>
             </owl:Restriction>            
         </rdfs:subClassOf>
-        <rdfs:subClassOf rdf:resource="&cpr;biological-process"/>
+        <rdfs:subClassOf rdf:resource="&go;GO_0008150"/>
         <dc:source rdf:datatype="&xsd;anyURI"
             >http://ontology.buffalo.edu/bio/OBR.pdf</dc:source>
     </owl:Class>
@@ -2076,17 +2224,7 @@ features of a disease</skos:editorialNote>
         <ace:PN_sg>physical anatomical entity</ace:PN_sg>
         <ace:CN_sg>physical anatomical entity</ace:CN_sg>
         <ace:CN_pl>physical anatomical entities</ace:CN_pl>
-            
-        <owl:intersectionOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="&snap;Continuant"/>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&cpr;immaterial-anatomical-continuant"/>
-                    <rdf:Description rdf:about="&cpr;anatomical-structure"/>
-                </owl:unionOf>
-            </owl:Class>
-        </owl:intersectionOf>
-        <!--rdfs:subClassOf rdf:resource="&cpr;organismal-continuant"/-->
+        <rdfs:subClassOf rdf:resource="&cpr;organismal-continuant"/>
         <dc:source rdf:datatype="&xsd;anyURI"
             >http://sigpubs.biostr.washington.edu/archive/00000135/</dc:source>
         <rdfs:comment
@@ -2197,12 +2335,15 @@ features of a disease</skos:editorialNote>
         <ace:CN_sg>physiological process</ace:CN_sg>
         <ace:CN_pl>physiological processes</ace:CN_pl>
             
-        <rdfs:subClassOf rdf:resource="&cpr;biological-process"/>
+        <rdfs:subClassOf rdf:resource="&go;GO_0008150"/>
         <dc:source rdf:datatype="&xsd;anyURI"
             >http://ontology.buffalo.edu/bio/OBR.pdf</dc:source>
     </owl:Class>
-    
 
+    <owl:Class rdf:about="&go;GO_0003674">
+        <rdfs:subClassOf rdf:resource="&snap;Function"/>
+        <rdfs:label>molecular function</rdfs:label>
+    </owl:Class>
 
     <!-- http://purl.org/cpr/physiological-role -->
 
@@ -2279,19 +2420,13 @@ features of a disease</skos:editorialNote>
         <owl:disjointWith rdf:resource="&cpr;symptom-recording"/>
         <owl:disjointWith rdf:resource="&cpr;patient-record"/>
         <owl:disjointWith rdf:resource="&cpr;clinical-finding"/>
-        <owl:unionOf rdf:parseType="Collection">
+        <owl:intersectionOf rdf:parseType="Collection">
             <rdf:Description rdf:about="&cpr;clinical-artifact"/>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&cpr;includes"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
+                <owl:allValuesFrom rdf:resource="&cpr;clinical-artifact"/>
             </owl:Restriction>
-        </owl:unionOf>
+        </owl:intersectionOf>
         <rdfs:subClassOf rdf:resource="&cpr;clinical-artifact"/>
         <skos:definition
           >These are clinical artifacts that represent clinical situations involving findings and observables</skos:definition>
@@ -2319,7 +2454,9 @@ in this hierarchy accomplish this. </rdfs:comment>
         <ace:CN_sg>representational artifact</ace:CN_sg>
         <ace:CN_pl>representational artifacts</ace:CN_pl>
             
-        <rdfs:subClassOf rdf:resource="&snap;GenericallyDependentContinuant"/>
+        <rdfs:subClassOf>
+          <owl:Class rdf:about="&snap;GenericallyDependentContinuant"/>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&cpr;representationOf"/>
@@ -2392,14 +2529,17 @@ an objective indication of disease, in contrast to a symptom, which is a subject
         <!--rdfs:label>Sign recording</rdfs:label-->
         <skos:editorialNote
             >Note, here a medical sign is defined as a recording rather than what the recording is a representation of.</skos:editorialNote>
-        <owl:intersectionOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="&cpr;clinical-finding"/>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&cpr;outputOf"/>
-                <owl:someValuesFrom rdf:resource="&cpr;clinical-examination"/>
-            </owl:Restriction>
-        </owl:intersectionOf>
-        <rdfs:subClassOf rdf:resource="&cpr;clinical-finding"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&cpr;clinical-finding"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&cpr;outputOf"/>
+                        <owl:someValuesFrom rdf:resource="&cpr;clinical-examination"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
     </owl:Class>
     
     <!-- http://purl.org/cpr/state -->
@@ -2478,6 +2618,16 @@ an objective indication of disease, in contrast to a symptom, which is a subject
             </owl:Restriction>
         </rdfs:subClassOf>        
         <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&cpr;outputOf"/>
+                        <owl:someValuesFrom rdf:resource="&cpr;self-examination"/>
+                    </owl:Restriction>
+                    <rdf:Description rdf:about="&cpr;anamnesis"/>
+                </owl:unionOf>
+            </owl:Class>
+
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&cpr;outputOf"/>
                 <owl:someValuesFrom>
