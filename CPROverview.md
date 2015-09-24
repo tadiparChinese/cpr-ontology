@@ -1,0 +1,87 @@
+# Introduction #
+
+There is an older ESW [wiki](http://esw.w3.org/topic/HCLS/POMROntology) describing some of the motivation behind the CPR ontology.  This wiki attempts to summarize some of the original motivating factors in how this ontology was put together as well as to document some of the more recent insights as well.
+
+The (Computer-Based Patient Record) CPR ontology  burrows its name from the Institute of Medicine term used to define medical records systems of the future and the important features that distinguish them for EHRs of today.   In particular, it defines a set of requirements including a _Record Content_ category, which states:
+
+> Uniform core data elements, standardized coding systems and formats, a common data dictionary, and information on outcomes of care and functional status.
+
+The requirement of a set of uniform core elements is meant to be directly addressed by this ontology.  In addition, it attempts to define a minimal set of terms that provide grounded, ontologically commitment for the representations shared between many of the healthcare information (such as HL7 RIM), process and terminological models via the use of foundational ontologies.
+
+In addition, a major influencing principle is that as far as the application of ontology for the benefit of medical informatics is concerned, a pragmatic approach is necessary - one that compromises between a purely 'realist' approach and a cognitive approach that refrains from committing to a representation of the intrinsic nature of the world.  For those aspects of reality for which there is significant consensus on the underlying science and use of terminology, an ontology should try as much as possible to capture the constraints that reflect this consensus.  However, where such constraints do not provide any direct benefit in the use ontology in a CPR, we should refrain from any further formalization.  The general motivation is to allow ontologies to facilitate the use of computer reasoning in playing an important role in the scientific method, but at the same time protect against an excessive attempt to reduce every aspect of clinical medicine to metaphysical distinctions that do not have any legitimate benefit.
+
+Historically, this ontology developed from an initial effort to develop a Patient Record ontology (in the absence of any), an initial [presentation](http://esw.w3.org/topic/HCLS/F2F/Slides?action=AttachFile&do=get&target=CABGIndicationsGuidelines.html#(5)) - during a W3C Healthcare and Life Science 2006 Face to Face - on how a major Coronary Artery Bypass Graft (CABG) Procedure Guideline could be implemented using Notation 3 rules and OWL, and a [presentation](http://esw.w3.org/topic/HCLS/ISWC/Workshop?action=AttachFile&do=get&target=CPR-KR.html) to the HCLSIG during an International Semantic Web Conference Workshop on CPRs and how Semantic Web representation standards can be applied to CPR requirements.
+
+In general, there were several schools of thoughts that heavily influenced the composition of the CPR ontology, listed below in no particular order:
+
+  * Rector, A. et.al., _Ontological & Practical Issues in using a Description Logic to Represent Medical Concepts: Experience from GALEN_
+  * Smith, B. et.al., _Foundation for the Electronic Health Record: An Ontological Analysis of the HL7's Reference Information Model_
+  * Ross, C., _A Strategy for Improving and Integrating Biomedical Ontologies_
+  * Smith, B. et.al., _Towards a Reference Terminology for Ontology Research and Development in the Biomedical Domain Care_
+  * Weed, L., _Medical Records that Guide and Teach_
+  * Bayegan, E., _Knowledge Representation for Relevance Ranking of Patient-Record Contents in Primary-Care Situations_
+  * Whitbeck, C.,  _What is diagnosis? Some critical reflections_
+  * Whitbeck, C., _Causation in medicine: The disease entity model_
+  * Scheuermann, R.H., _Toward an ontological treatment of disease and diagnosis_
+
+In the following sections, we briefly discuss the underlying principles behind some of the major categories of terms.
+
+## Clinical Acts ##
+
+The process substructure within the CPR ontology is more stable than its continuant substructure and for the most part Elizabeth Bayegan's approach for modelling clinical processes as a work flow model was central in picking a set of primary terms to use to describe the various activities that comprise a patient care episode.
+
+A significant portion of medical terminology is comprised of terms that describe activity and the actors involved in a patient care encounter.  The importance of workflow to clinical terminology can be seen in its prominent role in standard message exchange protocols such as HL7 as well as clinical decision support systems.  Most of the clinical artifacts in a computer-based patient record system are recorded in the context of one or more activities in the a patient encounter.  An ontological account of patient care will need to model the various clinical tasks, the various roles played in these activities, and the flow of information in the context of these activities.
+
+Bayegan et al. [[Bayegan](Bayegan.md)] describe a method for patient-record systems that has (as an important component), a process ontology.  The process ontology defines the family-care workflow process , activities, participants, and the interactions of the participants with a patient-record system.  In addition to burrowing from standard conceptual models for workflow management, this ontology was influenced by the NHS Clinical Headings Project whose main objective was to "identify a limited number of headings that will perform the jobs that are needed for clinical communication and navigation and that can be agreed upon by every participant involved in clinical communication." [[Bayegan](Bayegan.md)]  This framework is quite compatible with HL7.
+
+Central to this ontology are care-act types which correspond to the class of all activities in the patient care process.  In incorporating this taoxnomy of clinical activities, we place this class and all its descendants directly under the span:Process class in the BFO ontology.
+
+The cpr:clinical-act and its subordinate terms reflect this care activity hierarchy
+
+## Findings ##
+
+![http://cpr-ontology.googlecode.com/files/clinical-findings.png](http://cpr-ontology.googlecode.com/files/clinical-findings.png)
+
+## Clinical Situations ##
+
+## Diagnoses, Diseases, and their Manifestations ##
+
+Many of the terms from framework proposed by Scheuermann et.al. are re-used in this ontology.  We refer the user to their paper and to other ontologies (such as OGMS) that also appeal to this approach of representing diseases and their manifestations.
+
+Many of the insights of Caroline Whitbeck regarding the historical context of the study of clinical disease entities, pathological disease entities, and etiologic agents were considered in the disease-related terms in the CPR ontology.  In addition, she argues that .. :
+
+> .. since a disease is to be understood as a process, the manifestations of disease, i.e., its clinical and pathological signs, should be regarded as part of the disease process, and thus as a part of the disease rather than as something caused by it.
+
+She also provides a basis for the involvement of an etiological agent in the classification of a disease.
+
+![http://cpr-ontology.googlecode.com/files/pathological-disposition.png](http://cpr-ontology.googlecode.com/files/pathological-disposition.png)
+
+## Clinical Hypothesis ##
+
+Whitbeck provides an ontological basis for clinical diagnoses, how they fit into the terminology of clinical medicine, and their relationship to diseases and their etiological agents. Specifically, she states:
+
+> .. diagnosis is properly understood as integrally related to the rest of clinical reasoning, and therefore that diagnosis has no goal of its own separable from the general goals of clinical medicine, which are the goals of providing the prevention and treatment for disease that will result in the best outcome for the patient. In particular, I will argue that diagnosis does not have the goal of correctly identifying the disease entities instantiated in a case of illness [[...]] but rather it contributes to the general goals of clinical medicine, that of achieving the best outcome for the patient and preventing the spread of disease.
+
+This was taken into account in the definition of **clinical-analysis-act**.
+
+![http://cpr-ontology.googlecode.com/files/clnical-diagnosis.png](http://cpr-ontology.googlecode.com/files/clnical-diagnosis.png)
+
+## Anatomy ##
+
+For the most part, the CPR ontology only specifies a placeholder for the most broad of categories in anatomy with the expectation when more specific terms are needed, they can either be directly grafted from FMA or composed from the atomic parts in the ontology via post-coordination.  This approach is also mirrored by BioTop (which is imported by the CPR ontology)
+
+## Representational Artifact ##
+
+The cpr:representational-artifact terms is meant to address the common conflation of digital entities and the _real
+world_ entities that they represent or describe in electronic patient record systems. A proper ontological handling of
+medical record terms needs to accommodate terms associated with informatics artifacts. The HL7 family of interchange protocols are primarily concerned with categories such as message, document, record, observation, etc.., that specify how information is composed within a patient record system. These are considered Representational Artifacts [et.al.](Smith.md) that are fixed in some enduring medium in such a way that they communicate information about instances of common biomedical terminology.
+
+## Problem Orientation ##
+
+![http://cpr-ontology.googlecode.com/files/medical-problems.png](http://cpr-ontology.googlecode.com/files/medical-problems.png)
+
+## Stative Conditions ##
+
+## Procedures ##
+
+![http://cpr-ontology.googlecode.com/files/procedures.png](http://cpr-ontology.googlecode.com/files/procedures.png)
